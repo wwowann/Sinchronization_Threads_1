@@ -7,13 +7,10 @@ public class Main {
     }
 
     public static void startThread(CarsSalon carsSalon) throws InterruptedException {
-        for (int i = 0; i < 4; i++) {
-            new Thread(null, carsSalon::sellCar, "Покупатель 1 ").start();
-            new Thread(null, carsSalon::sellCar, "Покупатель 2 ").start();
-            new Thread(null, carsSalon::sellCar, "Покупатель 3 ").start();
-            Thread.sleep(5000);
-            System.out.println("");
-        }
+
+        new Thread(null, carsSalon::sellCar, "Покупатель 1 ").start();
+        new Thread(null, carsSalon::sellCar, "Покупатель 2 ").start();
+        new Thread(null, carsSalon::sellCar, "Покупатель 3 ").start();
     }
 }
 
